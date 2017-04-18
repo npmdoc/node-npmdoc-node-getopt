@@ -1,0 +1,1146 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="http://github.com/jiangmiao/node-getopt"
+
+    >node-getopt (v0.2.3)</a>
+</h1>
+<h4>featured command line args parser</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-getopt">module node-getopt</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">node-getopt.</span>HAS_ARGUMENT</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">node-getopt.</span>MULTI_SUPPORTED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">node-getopt.</span>NO_ARGUMENT</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">node-getopt.</span>SINGLE_ONLY</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-getopt.node-getopt">
+            function <span class="apidocSignatureSpan"></span>node-getopt
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-getopt.create">
+            function <span class="apidocSignatureSpan">node-getopt.</span>create
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-getopt.getVersion">
+            function <span class="apidocSignatureSpan">node-getopt.</span>getVersion
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-getopt.getopt">
+            function <span class="apidocSignatureSpan">node-getopt.</span>getopt
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-getopt.toString">
+            function <span class="apidocSignatureSpan">node-getopt.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-getopt.</span>getopt.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">node-getopt.</span>VERSION</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-getopt.getopt">module node-getopt.getopt</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">node-getopt.getopt.</span>HAS_ARGUMENT</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">node-getopt.getopt.</span>MULTI_SUPPORTED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">node-getopt.getopt.</span>NO_ARGUMENT</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">node-getopt.getopt.</span>SINGLE_ONLY</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-getopt.getopt.getopt">
+            function <span class="apidocSignatureSpan">node-getopt.</span>getopt
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-getopt.getopt.create">
+            function <span class="apidocSignatureSpan">node-getopt.getopt.</span>create
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-getopt.getopt.getVersion">
+            function <span class="apidocSignatureSpan">node-getopt.getopt.</span>getVersion
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">node-getopt.getopt.</span>VERSION</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-getopt.getopt.prototype">module node-getopt.getopt.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-getopt.getopt.prototype.bindHelp">
+            function <span class="apidocSignatureSpan">node-getopt.getopt.prototype.</span>bindHelp
+            <span class="apidocSignatureSpan">(help)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-getopt.getopt.prototype.emit">
+            function <span class="apidocSignatureSpan">node-getopt.getopt.prototype.</span>emit
+            <span class="apidocSignatureSpan">(name, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-getopt.getopt.prototype.error">
+            function <span class="apidocSignatureSpan">node-getopt.getopt.prototype.</span>error
+            <span class="apidocSignatureSpan">(errorFunc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-getopt.getopt.prototype.getHelp">
+            function <span class="apidocSignatureSpan">node-getopt.getopt.prototype.</span>getHelp
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-getopt.getopt.prototype.getVersion">
+            function <span class="apidocSignatureSpan">node-getopt.getopt.prototype.</span>getVersion
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-getopt.getopt.prototype.on">
+            function <span class="apidocSignatureSpan">node-getopt.getopt.prototype.</span>on
+            <span class="apidocSignatureSpan">(name, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-getopt.getopt.prototype.parse">
+            function <span class="apidocSignatureSpan">node-getopt.getopt.prototype.</span>parse
+            <span class="apidocSignatureSpan">(argv)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-getopt.getopt.prototype.parseSystem">
+            function <span class="apidocSignatureSpan">node-getopt.getopt.prototype.</span>parseSystem
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-getopt.getopt.prototype.parse_system">
+            function <span class="apidocSignatureSpan">node-getopt.getopt.prototype.</span>parse_system
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-getopt.getopt.prototype.save_option_">
+            function <span class="apidocSignatureSpan">node-getopt.getopt.prototype.</span>save_option_
+            <span class="apidocSignatureSpan">(options, option, argv)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-getopt.getopt.prototype.setHelp">
+            function <span class="apidocSignatureSpan">node-getopt.getopt.prototype.</span>setHelp
+            <span class="apidocSignatureSpan">(help)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-getopt.getopt.prototype.showHelp">
+            function <span class="apidocSignatureSpan">node-getopt.getopt.prototype.</span>showHelp
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-getopt.getopt.prototype.trigger_events_">
+            function <span class="apidocSignatureSpan">node-getopt.getopt.prototype.</span>trigger_events_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-getopt" id="apidoc.module.node-getopt">module node-getopt</a></h1>
+
+
+
+
+
+
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-getopt.node-getopt" id="apidoc.element.node-getopt.node-getopt">
+        function <span class="apidocSignatureSpan"></span>node-getopt
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Getopt(options) {
+  var comment, definition, has_argument, long_name, multi_supported, name, option, optional, short_name, _i, _len, _ref;
+  this.options = options;
+  this.short_options = {};
+  this.long_options = {};
+  this.long_names = [];
+  this.events = {};
+  this.event_names = [];
+  this.errorFunc = function(e) {
+    console.info(e.message);
+    return process.exit(1);
+  };
+  if (process.argv[1]) {
+    this.help = &#x22;Usage: node &#x22; + (process.argv[1].match(/(?:.*[\/\\])?(.*)$/)[1]) + &#x22;\n\n[[OPTIONS]]\n&#x22;;
+  } else {
+    this.help = &#x22;[[OPTIONS]]&#x22;;
+  }
+  _ref = this.options;
+  for (_i = 0, _len = _ref.length; _i &#x3c; _len; _i++) {
+    option = _ref[_i];
+    short_name = option[0], definition = option[1], comment = option[2];
+    if (comment == null) {
+      comment = &#x27;&#x27;;
+    }
+    if (definition == null) {
+      definition = &#x27;&#x27;;
+    }
+    if (short_name == null) {
+      short_name = &#x27;&#x27;;
+    }
+    (__matches = definition.match(/^([\w\-]*)/));
+    long_name = __matches[1];
+    has_argument = definition.indexOf(&#x27;=&#x27;) !== -1;
+    multi_supported = definition.indexOf(&#x27;+&#x27;) !== -1;
+    optional = /\[=.*?\]/.test(definition);
+    long_name = long_name.trim();
+    short_name = short_name.trim();
+    if (optional &#x26;&#x26; short_name) {
+      throw new Error(&#x27;optional argument can only work with long option&#x27;);
+    }
+    if (!long_name) {
+      long_name = short_name;
+    }
+    name = long_name;
+    if (long_name === &#x27;&#x27;) {
+      throw new Error(&#x22;empty option found. the last option name is &#x22; + (this.long_names.slice(-1)));
+    }
+    if (this.long_options[long_name] == null) {
+      this.long_names.push(long_name);
+      this.long_options[long_name] = {
+        name: name,
+        short_name: short_name,
+        long_name: long_name,
+        has_argument: has_argument,
+        multi_supported: multi_supported,
+        comment: comment,
+        optional: optional,
+        definition: definition
+      };
+    } else {
+      throw new Error(&#x22;option &#x22; + long_name + &#x22; redefined.&#x22;);
+    }
+    if (short_name !== &#x27;&#x27;) {
+      if (short_name.length !== 1) {
+        throw new Error(&#x27;short option must be single characters&#x27;);
+      }
+      this.short_options[short_name] = this.long_options[long_name];
+    }
+  }
+  this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-getopt.create" id="apidoc.element.node-getopt.create">
+        function <span class="apidocSignatureSpan">node-getopt.</span>create
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (options) {
+  return new Getopt(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+-----------
+
+**Parse Commandline**
+
+code: oneline.js
+
+// node-getopt oneline example.
+opt = require(&#x27;node-getopt&#x27;).<span class="apidocCodeKeywordSpan">create</span>([
+  [&#x27;s&#x27; , &#x27;&#x27;                    , &#x27;short option.&#x27;],
+  [&#x27;&#x27;  , &#x27;long&#x27;                , &#x27;long option.&#x27;],
+  [&#x27;S&#x27; , &#x27;short-with-arg=ARG&#x27;  , &#x27;option with argument&#x27;],
+  [&#x27;L&#x27; , &#x27;long-with-arg=ARG&#x27;   , &#x27;long option with argument&#x27;],
+  [&#x27;&#x27;  , &#x27;color[=COLOR]&#x27;       , &#x27;COLOR is optional&#x27;],
+  [&#x27;m&#x27; , &#x27;multi-with-arg=ARG+&#x27; , &#x27;multiple option with argument&#x27;],
+  [&#x27;&#x27;  , &#x27;no-comment&#x27;],
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-getopt.getVersion" id="apidoc.element.node-getopt.getVersion">
+        function <span class="apidocSignatureSpan">node-getopt.</span>getVersion
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getVersion = function () {
+  return this.VERSION;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-getopt.getopt" id="apidoc.element.node-getopt.getopt">
+        function <span class="apidocSignatureSpan">node-getopt.</span>getopt
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Getopt(options) {
+  var comment, definition, has_argument, long_name, multi_supported, name, option, optional, short_name, _i, _len, _ref;
+  this.options = options;
+  this.short_options = {};
+  this.long_options = {};
+  this.long_names = [];
+  this.events = {};
+  this.event_names = [];
+  this.errorFunc = function(e) {
+    console.info(e.message);
+    return process.exit(1);
+  };
+  if (process.argv[1]) {
+    this.help = &#x22;Usage: node &#x22; + (process.argv[1].match(/(?:.*[\/\\])?(.*)$/)[1]) + &#x22;\n\n[[OPTIONS]]\n&#x22;;
+  } else {
+    this.help = &#x22;[[OPTIONS]]&#x22;;
+  }
+  _ref = this.options;
+  for (_i = 0, _len = _ref.length; _i &#x3c; _len; _i++) {
+    option = _ref[_i];
+    short_name = option[0], definition = option[1], comment = option[2];
+    if (comment == null) {
+      comment = &#x27;&#x27;;
+    }
+    if (definition == null) {
+      definition = &#x27;&#x27;;
+    }
+    if (short_name == null) {
+      short_name = &#x27;&#x27;;
+    }
+    (__matches = definition.match(/^([\w\-]*)/));
+    long_name = __matches[1];
+    has_argument = definition.indexOf(&#x27;=&#x27;) !== -1;
+    multi_supported = definition.indexOf(&#x27;+&#x27;) !== -1;
+    optional = /\[=.*?\]/.test(definition);
+    long_name = long_name.trim();
+    short_name = short_name.trim();
+    if (optional &#x26;&#x26; short_name) {
+      throw new Error(&#x27;optional argument can only work with long option&#x27;);
+    }
+    if (!long_name) {
+      long_name = short_name;
+    }
+    name = long_name;
+    if (long_name === &#x27;&#x27;) {
+      throw new Error(&#x22;empty option found. the last option name is &#x22; + (this.long_names.slice(-1)));
+    }
+    if (this.long_options[long_name] == null) {
+      this.long_names.push(long_name);
+      this.long_options[long_name] = {
+        name: name,
+        short_name: short_name,
+        long_name: long_name,
+        has_argument: has_argument,
+        multi_supported: multi_supported,
+        comment: comment,
+        optional: optional,
+        definition: definition
+      };
+    } else {
+      throw new Error(&#x22;option &#x22; + long_name + &#x22; redefined.&#x22;);
+    }
+    if (short_name !== &#x27;&#x27;) {
+      if (short_name.length !== 1) {
+        throw new Error(&#x27;short option must be single characters&#x27;);
+      }
+      this.short_options[short_name] = this.long_options[long_name];
+    }
+  }
+  this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-getopt.toString" id="apidoc.element.node-getopt.toString">
+        function <span class="apidocSignatureSpan">node-getopt.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-getopt.getopt" id="apidoc.module.node-getopt.getopt">module node-getopt.getopt</a></h1>
+
+
+
+
+
+
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-getopt.getopt.getopt" id="apidoc.element.node-getopt.getopt.getopt">
+        function <span class="apidocSignatureSpan">node-getopt.</span>getopt
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Getopt(options) {
+  var comment, definition, has_argument, long_name, multi_supported, name, option, optional, short_name, _i, _len, _ref;
+  this.options = options;
+  this.short_options = {};
+  this.long_options = {};
+  this.long_names = [];
+  this.events = {};
+  this.event_names = [];
+  this.errorFunc = function(e) {
+    console.info(e.message);
+    return process.exit(1);
+  };
+  if (process.argv[1]) {
+    this.help = &#x22;Usage: node &#x22; + (process.argv[1].match(/(?:.*[\/\\])?(.*)$/)[1]) + &#x22;\n\n[[OPTIONS]]\n&#x22;;
+  } else {
+    this.help = &#x22;[[OPTIONS]]&#x22;;
+  }
+  _ref = this.options;
+  for (_i = 0, _len = _ref.length; _i &#x3c; _len; _i++) {
+    option = _ref[_i];
+    short_name = option[0], definition = option[1], comment = option[2];
+    if (comment == null) {
+      comment = &#x27;&#x27;;
+    }
+    if (definition == null) {
+      definition = &#x27;&#x27;;
+    }
+    if (short_name == null) {
+      short_name = &#x27;&#x27;;
+    }
+    (__matches = definition.match(/^([\w\-]*)/));
+    long_name = __matches[1];
+    has_argument = definition.indexOf(&#x27;=&#x27;) !== -1;
+    multi_supported = definition.indexOf(&#x27;+&#x27;) !== -1;
+    optional = /\[=.*?\]/.test(definition);
+    long_name = long_name.trim();
+    short_name = short_name.trim();
+    if (optional &#x26;&#x26; short_name) {
+      throw new Error(&#x27;optional argument can only work with long option&#x27;);
+    }
+    if (!long_name) {
+      long_name = short_name;
+    }
+    name = long_name;
+    if (long_name === &#x27;&#x27;) {
+      throw new Error(&#x22;empty option found. the last option name is &#x22; + (this.long_names.slice(-1)));
+    }
+    if (this.long_options[long_name] == null) {
+      this.long_names.push(long_name);
+      this.long_options[long_name] = {
+        name: name,
+        short_name: short_name,
+        long_name: long_name,
+        has_argument: has_argument,
+        multi_supported: multi_supported,
+        comment: comment,
+        optional: optional,
+        definition: definition
+      };
+    } else {
+      throw new Error(&#x22;option &#x22; + long_name + &#x22; redefined.&#x22;);
+    }
+    if (short_name !== &#x27;&#x27;) {
+      if (short_name.length !== 1) {
+        throw new Error(&#x27;short option must be single characters&#x27;);
+      }
+      this.short_options[short_name] = this.long_options[long_name];
+    }
+  }
+  this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-getopt.getopt.create" id="apidoc.element.node-getopt.getopt.create">
+        function <span class="apidocSignatureSpan">node-getopt.getopt.</span>create
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (options) {
+  return new Getopt(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+-----------
+
+**Parse Commandline**
+
+code: oneline.js
+
+// node-getopt oneline example.
+opt = require(&#x27;node-getopt&#x27;).<span class="apidocCodeKeywordSpan">create</span>([
+  [&#x27;s&#x27; , &#x27;&#x27;                    , &#x27;short option.&#x27;],
+  [&#x27;&#x27;  , &#x27;long&#x27;                , &#x27;long option.&#x27;],
+  [&#x27;S&#x27; , &#x27;short-with-arg=ARG&#x27;  , &#x27;option with argument&#x27;],
+  [&#x27;L&#x27; , &#x27;long-with-arg=ARG&#x27;   , &#x27;long option with argument&#x27;],
+  [&#x27;&#x27;  , &#x27;color[=COLOR]&#x27;       , &#x27;COLOR is optional&#x27;],
+  [&#x27;m&#x27; , &#x27;multi-with-arg=ARG+&#x27; , &#x27;multiple option with argument&#x27;],
+  [&#x27;&#x27;  , &#x27;no-comment&#x27;],
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-getopt.getopt.getVersion" id="apidoc.element.node-getopt.getopt.getVersion">
+        function <span class="apidocSignatureSpan">node-getopt.getopt.</span>getVersion
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getVersion = function () {
+  return this.VERSION;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-getopt.getopt.prototype" id="apidoc.module.node-getopt.getopt.prototype">module node-getopt.getopt.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-getopt.getopt.prototype.bindHelp" id="apidoc.element.node-getopt.getopt.prototype.bindHelp">
+        function <span class="apidocSignatureSpan">node-getopt.getopt.prototype.</span>bindHelp
+        <span class="apidocSignatureSpan">(help)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bindHelp = function (help) {
+  if (help) {
+    this.setHelp(help);
+  }
+  this.on(&#x27;help&#x27;, function() {
+    this.showHelp();
+    return process.exit(0);
+  });
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  [&#x27;L&#x27; , &#x27;long-with-arg=ARG&#x27;   , &#x27;long option with argument&#x27;],
+  [&#x27;&#x27;  , &#x27;color[=COLOR]&#x27;       , &#x27;COLOR is optional&#x27;],
+  [&#x27;m&#x27; , &#x27;multi-with-arg=ARG+&#x27; , &#x27;multiple option with argument&#x27;],
+  [&#x27;&#x27;  , &#x27;no-comment&#x27;],
+  [&#x27;h&#x27; , &#x27;help&#x27;                , &#x27;display this help&#x27;],
+  [&#x27;v&#x27; , &#x27;version&#x27;             , &#x27;show version&#x27;]
+])              // create Getopt instance
+.<span class="apidocCodeKeywordSpan">bindHelp</span>()     // bind option &#x27;help&#x27; to default action
+.parseSystem(); // parse command line
+
+console.info(opt);
+
+`$ node oneline.js  foo -s --long-with-arg bar -m a -m b -- --others`
+
+{ argv: [ &#x27;foo&#x27;, &#x27;--others&#x27; ],
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-getopt.getopt.prototype.emit" id="apidoc.element.node-getopt.getopt.prototype.emit">
+        function <span class="apidocSignatureSpan">node-getopt.getopt.prototype.</span>emit
+        <span class="apidocSignatureSpan">(name, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">emit = function (name, cb) {
+  if (this.events[name]) {
+    return this.events[name].call(this, this.parsedOption.argv, this.parsedOption.options);
+  } else {
+    throw new Error(&#x22;Getopt trigger &#x27;&#x22; + name + &#x22;&#x27; is not found&#x22;);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-getopt.getopt.prototype.error" id="apidoc.element.node-getopt.getopt.prototype.error">
+        function <span class="apidocSignatureSpan">node-getopt.getopt.prototype.</span>error
+        <span class="apidocSignatureSpan">(errorFunc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">error = function (errorFunc) {
+  this.errorFunc = errorFunc;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-getopt.getopt.prototype.getHelp" id="apidoc.element.node-getopt.getopt.prototype.getHelp">
+        function <span class="apidocSignatureSpan">node-getopt.getopt.prototype.</span>getHelp
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getHelp = function () {
+  var comment, definition, long_name, opt, option, options, short_name, strs, ws, _i, _len, _ref;
+  ws = [];
+  options = [];
+  _ref = this.long_names;
+  for (_i = 0, _len = _ref.length; _i &#x3c; _len; _i++) {
+    long_name = _ref[_i];
+    option = this.long_options[long_name];
+    short_name = option.short_name, long_name = option.long_name, comment = option.comment, definition = option.definition;
+    if (short_name &#x26;&#x26; short_name === long_name) {
+      opt = &#x22;-&#x22; + short_name;
+    } else if (short_name) {
+      opt = &#x22;-&#x22; + short_name + &#x22;, --&#x22; + definition;
+    } else {
+      opt = &#x22;    --&#x22; + definition;
+    }
+    ws[0] = Math.max(ws[0] &#x3e;&#x3e; 0, opt.length);
+    options.push([opt, comment]);
+  }
+  strs = (function() {
+    var _j, _len1, _results;
+    _results = [];
+    for (_j = 0, _len1 = options.length; _j &#x3c; _len1; _j++) {
+      option = options[_j];
+      opt = option[0], comment = option[1];
+      while (opt.length &#x3c; ws[0]) {
+        opt += &#x27; &#x27;;
+      }
+      _results.push(&#x22;  &#x22; + opt + &#x22;  &#x22; + comment);
+    }
+    return _results;
+  })();
+  return this.help.replace(&#x27;[[OPTIONS]]&#x27;, strs.join(&#x22;\n&#x22;));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    Returns: String
+
+String getHelp()
+    Get the help generated.
+
+Getopt showHelp()
+    console.info(getopt.<span class="apidocCodeKeywordSpan">getHelp</span>());
+
+Getopt bindHelp([String HELP])
+    set help template to HELP if HELP is not empty.
+    bind &#x27;help&#x27; option to default action, show help and exit with 0.
+
+Getpot on(String optionName, Function&#x3c;Array argv, Object options&#x3e; action)
+    after parsing, trigger the action if optionName is found.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-getopt.getopt.prototype.getVersion" id="apidoc.element.node-getopt.getopt.prototype.getVersion">
+        function <span class="apidocSignatureSpan">node-getopt.getopt.prototype.</span>getVersion
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getVersion = function () {
+  return Getopt.VERSION;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-getopt.getopt.prototype.on" id="apidoc.element.node-getopt.getopt.prototype.on">
+        function <span class="apidocSignatureSpan">node-getopt.getopt.prototype.</span>on
+        <span class="apidocSignatureSpan">(name, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">on = function (name, cb) {
+  this.events[name] = cb;
+  this.event_names.push(name);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-getopt.getopt.prototype.parse" id="apidoc.element.node-getopt.getopt.prototype.parse">
+        function <span class="apidocSignatureSpan">node-getopt.getopt.prototype.</span>parse
+        <span class="apidocSignatureSpan">(argv)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function (argv) {
+  var arg, i, long_name, option, rt_argv, rt_options, short_name, short_names, value, _i, _len;
+  try {
+    argv = argv.slice(0);
+    rt_options = {};
+    rt_argv = [];
+    while ((arg = argv.shift()) != null) {
+      if ((__matches = arg.match(/^-(\w[\w\-]*)/))) {
+        short_names = __matches[1];
+        for (i = _i = 0, _len = short_names.length; _i &#x3c; _len; i = ++_i) {
+          short_name = short_names[i];
+          option = this.short_options[short_name];
+          if (!option) {
+            throw new Error(&#x22;invalid option &#x22; + short_name);
+          }
+          if (option.has_argument) {
+            if (i &#x3c; arg.length - 2) {
+              argv.unshift(arg.slice(i + 2));
+            }
+            this.save_option_(rt_options, option, argv);
+            break;
+          } else {
+            this.save_option_(rt_options, option, argv);
+          }
+        }
+      } else if ((__matches = arg.match(/^--(\w[\w\-]*)((?:=.*)?)$/))) {
+        long_name = __matches[1];
+        value = __matches[2];
+        option = this.long_options[long_name];
+        if (!option) {
+          throw new Error(&#x22;invalid option &#x22; + long_name);
+        }
+        if (value !== &#x27;&#x27;) {
+          value = value.slice(1);
+          argv.unshift(value);
+        } else if (option.optional) {
+          argv.unshift(&#x27;&#x27;);
+        }
+        this.save_option_(rt_options, option, argv);
+      } else if (arg === &#x27;--&#x27;) {
+        rt_argv = rt_argv.concat(argv);
+        break;
+      } else {
+        rt_argv.push(arg);
+      }
+    }
+  } catch (e) {
+    this.errorFunc(e);
+  }
+  this.parsedOption = new ParsedOption(rt_argv, rt_options);
+  this.trigger_events_();
+  return this.parsedOption;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  [&#x27;&#x27;  , &#x27;color[=COLOR]&#x27;],
+  [&#x27;h&#x27; , &#x27;help&#x27;]
+]).bindHelp();
+
+// process.argv needs slice(2) for it starts with &#x27;node&#x27; and &#x27;script name&#x27;
+// parseSystem is alias  of parse(process.argv.slice(2))
+// opt = getopt.parseSystem();
+opt = getopt.<span class="apidocCodeKeywordSpan">parse</span>(process.argv.slice(2));
+console.info(opt);
+
+`$ node simple.js foo -s --long-with-arg bar -m a -m b -- --others`
+
+{ argv: [ &#x27;foo&#x27;, &#x27;--others&#x27; ],
+  options: { s: true, &#x27;long-with-arg&#x27;: &#x27;bar&#x27;, m: [ &#x27;a&#x27;, &#x27;b&#x27; ] } }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-getopt.getopt.prototype.parseSystem" id="apidoc.element.node-getopt.getopt.prototype.parseSystem">
+        function <span class="apidocSignatureSpan">node-getopt.getopt.prototype.</span>parseSystem
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parseSystem = function () {
+  return this.parse_system();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  [&#x27;&#x27;  , &#x27;color[=COLOR]&#x27;       , &#x27;COLOR is optional&#x27;],
+  [&#x27;m&#x27; , &#x27;multi-with-arg=ARG+&#x27; , &#x27;multiple option with argument&#x27;],
+  [&#x27;&#x27;  , &#x27;no-comment&#x27;],
+  [&#x27;h&#x27; , &#x27;help&#x27;                , &#x27;display this help&#x27;],
+  [&#x27;v&#x27; , &#x27;version&#x27;             , &#x27;show version&#x27;]
+])              // create Getopt instance
+.bindHelp()     // bind option &#x27;help&#x27; to default action
+.<span class="apidocCodeKeywordSpan">parseSystem</span>(); // parse command line
+
+console.info(opt);
+
+`$ node oneline.js  foo -s --long-with-arg bar -m a -m b -- --others`
+
+{ argv: [ &#x27;foo&#x27;, &#x27;--others&#x27; ],
+  options:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-getopt.getopt.prototype.parse_system" id="apidoc.element.node-getopt.getopt.prototype.parse_system">
+        function <span class="apidocSignatureSpan">node-getopt.getopt.prototype.</span>parse_system
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse_system = function () {
+  return this.parse(process.argv.slice(2));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-getopt.getopt.prototype.save_option_" id="apidoc.element.node-getopt.getopt.prototype.save_option_">
+        function <span class="apidocSignatureSpan">node-getopt.getopt.prototype.</span>save_option_
+        <span class="apidocSignatureSpan">(options, option, argv)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">save_option_ = function (options, option, argv) {
+  var name, names, value, _i, _len, _ref;
+  if (option.has_argument) {
+    if (argv.length === 0) {
+      throw new Error(&#x22;option &#x22; + option.long_name + &#x22; need argument&#x22;);
+    }
+    value = argv.shift();
+  } else {
+    value = true;
+  }
+  names = [option.name];
+  for (_i = 0, _len = names.length; _i &#x3c; _len; _i++) {
+    name = names[_i];
+    if (option.multi_supported) {
+      if ((_ref = options[name]) == null) {
+        options[name] = [];
+      }
+      options[name].push(value);
+    } else {
+      options[name] = value;
+    }
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-getopt.getopt.prototype.setHelp" id="apidoc.element.node-getopt.getopt.prototype.setHelp">
+        function <span class="apidocSignatureSpan">node-getopt.getopt.prototype.</span>setHelp
+        <span class="apidocSignatureSpan">(help)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setHelp = function (help) {
+  this.help = help;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  [&#x27;m&#x27; , &#x27;multi-with-arg=ARG+&#x27; , &#x27;multiple option with argument&#x27;],
+  [&#x27;&#x27;  , &#x27;no-comment&#x27;],
+  [&#x27;h&#x27; , &#x27;help&#x27;                , &#x27;display this help&#x27;]
+]);
+
+// Use custom help template instead of default help
+// [[OPTIONS]] is the placeholder for options list
+getopt.<span class="apidocCodeKeywordSpan">setHelp</span>(
+  &#x22;Usage: node help.js [OPTION]\n&#x22; +
+  &#x22;node-getopt help demo.\n&#x22; +
+  &#x22;\n&#x22; +
+  &#x22;[[OPTIONS]]\n&#x22; +
+  &#x22;\n&#x22; +
+  &#x22;Installation: npm install node-getopt\n&#x22; +
+  &#x22;Respository:  https://github.com/jiangmiao/node-getopt&#x22;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-getopt.getopt.prototype.showHelp" id="apidoc.element.node-getopt.getopt.prototype.showHelp">
+        function <span class="apidocSignatureSpan">node-getopt.getopt.prototype.</span>showHelp
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">showHelp = function () {
+  console.info(this.getHelp());
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+&#x22;\n&#x22; +
+&#x22;[[OPTIONS]]\n&#x22; +
+&#x22;\n&#x22; +
+&#x22;Installation: npm install node-getopt\n&#x22; +
+&#x22;Respository:  https://github.com/jiangmiao/node-getopt&#x22;
+    );
+
+    getopt.<span class="apidocCodeKeywordSpan">showHelp</span>();
+
+`$ node examples/help.js`
+
+    Usage: node help.js [OPTION]
+    node-getopt help demo.
+
+-s                         short option.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-getopt.getopt.prototype.trigger_events_" id="apidoc.element.node-getopt.getopt.prototype.trigger_events_">
+        function <span class="apidocSignatureSpan">node-getopt.getopt.prototype.</span>trigger_events_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">trigger_events_ = function () {
+  var name, options, _i, _len, _ref;
+  options = this.parsedOption.options;
+  _ref = this.event_names;
+  for (_i = 0, _len = _ref.length; _i &#x3c; _len; _i++) {
+    name = _ref[_i];
+    if (options[name] != null) {
+      this.emit(name);
+    }
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
