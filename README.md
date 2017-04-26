@@ -1,6 +1,6 @@
 # npmdoc-node-getopt
 
-#### api documentation for  [node-getopt (v0.2.3)](http://github.com/jiangmiao/node-getopt)  [![npm package](https://img.shields.io/npm/v/npmdoc-node-getopt.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-node-getopt) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-node-getopt.svg)](https://travis-ci.org/npmdoc/node-npmdoc-node-getopt)
+#### basic api documentation for  [node-getopt (v0.2.3)](http://github.com/jiangmiao/node-getopt)  [![npm package](https://img.shields.io/npm/v/npmdoc-node-getopt.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-node-getopt) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-node-getopt.svg)](https://travis-ci.org/npmdoc/node-npmdoc-node-getopt)
 
 #### featured command line args parser
 
@@ -57,7 +57,8 @@
         "url": "git://github.com/jiangmiao/node-getopt.git"
     },
     "scripts": {},
-    "version": "0.2.3"
+    "version": "0.2.3",
+    "bin": {}
 }
 ```
 
